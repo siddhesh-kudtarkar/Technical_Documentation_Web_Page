@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="main.css" type="text/css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>Ionic Framework Documentation</header>
+            <ul type="none">
+                <li>
+                    <a class="nav-link" href="#Overview">Overview</a>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="#Environment_Setup">Environment Setup</a>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="#CLI_Installation">CLI Installation</a>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="#Packages_&_CDN">Packages & CDN</a>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="#Next_Steps">Next Steps</a>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="#Starting">Starting</a>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="#Previewing">Previewing</a>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="#Scaffolding">Scaffolding</a>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="#Developing_for_iOS">Developing for iOS</a>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="#Developing_for_Android">Developing for Android</a>
+                </li>
+            </ul>
+    </nav>
+    
+    <main id="main-doc">
+        <section id="Overview" class="main-section">
+            <header>Overview</header>
+            <p>Ionic Framework focuses on the frontend UX and UI interaction of an app — UI controls, interactions, gestures, animations. It's easy to learn, and integrates with other libraries or frameworks, such as Angular, React, or Vue. Alternatively, it can be used standalone without any frontend framework using a simple script include. If you’d like to learn more about Ionic Framework before diving in, we created a video to walk you through the basics.</p>
+        </section>
+        
+        <section id="Environment_Setup" class="main-section">
+            <header>Environment Setup</header>
+            <p>To get started with Ionic Framework, the only requirement is a Node & npm environment.
+
+            Of course, a code editor is also required. Visual Studio Code is recommended. Visual Studio Code is a free, batteries-included text editor made by Microsoft.</p>
+
+            <ul type="none">
+                <li>
+                    <h3>Terminal</h3>
+                    <p>In general, we recommend using the built-in terminals. Many third-party terminals work well with Ionic, but may not be supported.</p>
+                    <ul type="disc">
+                        <li>For Windows, Command Prompt and PowerShell are supported. WSL is known to work with Ionic, but may not be supported.</li>
+
+                        <li>For macOS, the built-in Terminal app is supported.</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h3>Node & npm</h3>
+                    <p>Almost all tooling for modern JavaScript projects is based in Node.js. The download page has prebuilt installation packages for all platforms. We recommend selecting the LTS version to ensure best compatibility.</p>
+
+                    <p>Node is bundled with npm, the package manager for JavaScript. To verify the installation, open a new terminal window and run:</p>
+
+                    <div class="code-div">
+                        <code>
+                            $ node --version<br>
+                            $ npm --version
+                        </code>
+                    </div>
+                </li>
+
+                <li>
+                    <h3>Git</h3>
+
+                    <p>
+                        Although not required, the version control system Git is highly recommended. Git is often accompanied by a Git Host, such as GitHub, in which case additional setup is required.
+                    </p>
+
+                    <p>
+                        Follow the tutorial from the Git Host's documentation to set up Git. To verify the installation, open a new terminal window and run:
+                    </p>
+
+                    <div class="code-div">
+                        <code>
+                            $ git --version
+                        </code>
+                    </div>
+                </li>
+
+                <li>
+                    <h3>Git GUI</h3>
+
+                    <p>
+                        Git is a command-line utility, but there are many GUI clients available. GitHub Desktop is recommended, and works well with GitHub.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="CLI_Installation" class="main-section">
+            <header>
+                CLI Installation
+            </header>
+
+            <p>
+                Before proceeding, make sure your computer has Node.js installed. See these instructions to set up an environment for Ionic. Install the Ionic CLI with npm:
+            </p>
+
+            <div class="code-div">
+                <code>
+                    $ npm install -g @ionic/cli
+                </code>
+            </div>
+
+            <p>
+                If there was a previous installation of the Ionic CLI, it will need to be uninstalled due to a change in package name.
+            </p>
+
+            <div class="code-div">
+                <code>
+                    $ npm uninstall -g ionic<br>
+                    $ npm install -g @ionic/cli 
+                </code>
+            </div>
+        </section>
+
+        <section id="Packages_&_CDN" class="main-section">
+            <header>Packages & CDN</header>
+
+            <p>
+                Ionic provides different packages that can be used to quickly get started using Ionic Framework or Ionicons in a test environment, Angular, any other framework, or none at all.
+            </p>
+
+            <ul type="none">
+                <li>
+                    <h3>Ionic Framework CDN</h3>
+
+                    <p>
+                        Ionic Framework can be included from a CDN for quick testing in a Plunker, Codepen, or any other online code editor!
+                    </p>
+
+                    <p>
+                        It's recommended to use jsdelivr to access the Framework from a CDN. To get the latest version, add the following inside the <head> element in an HTML file, or where external assets are included in the online code editor:
+                    </p>
+                </li>
+
+                <li>
+                    <h3>Ionic + Angular</h3>
+
+                    <p>
+                        When using Ionic Framework in an Angular project, install the latest <code>@ionic/angular</code> package from npm. This comes with all of the Ionic Framework components and Angular specific services and features.
+                    </p>
+
+                    <div class="code-div">
+                        <code>
+                            $ npm install @ionic/angular@latest --save
+                        </code>
+                    </div>
+                </li>
+
+                <li>
+                    <h3>Ionic React</h3>
+
+                    <p>
+                        To add Ionic to an already existing React project, install the <code>@ionic/react</code> and <code>@ionic/react-router</code> package.
+                    </p>
+
+                    <div class="code-div">
+                        <code>
+                            $ npm install @ionic/react
+                            <br>
+                            $ npm install @ionic/react-router
+                        </code>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="Next_Steps" class="main-section">
+            <header>Next Steps</header>
+
+            <ul type="none">
+                <li>
+                    <h3>Your First Ionic App: Angular</h3>
+
+                    <p>
+                        <code>@ionic/angular</code> combines the core Ionic experience with the tooling and APIs that are tailored to Angular Developers.
+                    </p>
+                </li>
+
+                <li>
+                    <h3>Your First Ionic App: React</h3>
+
+                    <p>
+                        Ionic React is native React version of Ionic Framework, the free, open source SDK powering millions of mission-critical apps all over the world. It's everything you need to ship award-winning apps for any platform, with React.
+                    </p>
+                </li>
+
+                <li>
+                    <h3>Your First Ionic App: Vue</h3>
+
+                    <p>
+                        A complete guide to get you up to speed with the basics of building Ionic apps with Vue.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="Starting" class="main-section">
+            <header>Starting</header>
+
+            <p>
+                Starting a new Ionic app is incredibly simple. From the command line, run the ionic start command and the CLI will handle the rest.
+            </p>
+
+            <div class="code-div">
+                <code>
+                    $ ionic start
+                    <br><br>
+
+                    <b>Every great app needs a name.</b>
+                    <br><br>
+
+                    Please enter the full name of your app. You can change this at any time. To bypass this prompt next time, supply name, the first argument to ionic start.<br><br>
+
+                    <b>? Project Name:</b>
+                </code>
+            </div>
+
+            <p>See all available templates with the following command:</p>
+
+            <div class="code-div">
+                <code>
+                    $ ionic start --list
+                </code>
+            </div>
+
+            <p>
+                These templates provide a great starting point for any app and include all the best practices for making a code base scale.
+            </p>
+        </section>
+
+        <section id="Previewing" class="main-section">
+            <header>
+                Previewing
+            </header>
+
+            <p>
+                There are many different options to test native functionality depending on your target platforms and needs.
+            </p>
+
+            <ul type="none">
+                <li>
+                    <h3>
+                        Run Locally in a Web Browser:
+                    </h3>
+
+                    <p>
+                        One of the most powerful features of Ionic is that the majority of your app development can happen right in a browser on your desktop. With full access to traditional web development tools (Chrome/Safari/Firefox dev tools), you can write code then test/debug it quickly without having to recompile or deploy to a simulator or device. To do so, run ionic serve from the command line in the project's directory:
+                    </p>
+
+                    <div class="code-div">
+                        <code>
+                            $ ionic serve
+                        </code>
+                    </div>
+                </li>
+
+                <li>
+                    <h3>Deploy to iOS.</h3>
+                </li>
+
+                <li>
+                    <h3>Deploy to Android.</h3>
+                </li>
+            </ul>
+            
+        </section>
+
+        <section id="Scaffolding" class="main-section">
+            <header>Scaffolding</header>
+
+            <p>
+                Once an app is created by the Ionic CLI, the next step is to start building out features and components. The majority of the app will be developed in the <code>src/app/</code> directory.
+            </p>
+
+            <p>
+                The src/app/ directory contains the root app component and module as well as additional directories that contain app features such as pages, components, services, etc.
+            </p>
+        </section>
+
+        <section id="Developing_for_iOS" class="main-section">
+            <header>Developing for iOS</header>
+
+            <ul type="none">
+                <li>
+                    <h3>
+                        Xcode setup
+                    </h3>
+
+                    <p>
+                        Xcode is the IDE for creating native iOS apps. It includes the iOS SDK and Xcode command-line tools. Xcode can be downloaded for free with an Apple account or it can be installed through the App Store. Once Xcode is installed, make sure the command-line tools are selected for use:
+                    </p>
+
+                    <div class="code-div">
+                        <code>
+                            $ xcode-select --install
+                        </code>
+                    </div>
+                </li>
+
+                <li>
+                    <h3>
+                        Setting up a Development Team
+                    </h3>
+
+                    <p>
+                        All iOS apps must be code signed, even for development. Luckily, Xcode makes this easy with automatic code signing. The only prerequisite is an Apple ID. Open Xcode and navigate to Xcode » Preferences » Accounts. Add an Apple ID if none are listed. Once logged in, a Personal Team will appear in the team list of the Apple ID.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="Developing_for_Android" class="main-section">
+            <header>
+                Developing for Android
+            </header>
+
+            <ul type="none">
+                <li>
+                    <h3>Installing Android Studio</h3>
+
+                    <p>
+                        Download Android Studio from the Android website. More detailed installation instructions can be found in the User Guide.
+                    </p>
+                </li>
+
+                <li>
+                    <h3>
+                        Installing the Android SDK
+                    </h3>
+                    
+                    <p>
+                        Once installed, open Android Studio. The IDE should detect that the Android SDK needs to be installed. In the SDK Components Setup screen, finish installing the SDK. Keep note of the Android SDK Location.
+                    </p>
+                </li>
+
+                <li>
+                    <h3>
+                        Setting up an Android device
+                    </h3>
+
+                    <p>
+                        Verify the connection works by connecting the device to the computer with a USB cable and using the following command:
+                    </p>
+
+                    <div class="code-div">
+                        <code>
+                            $ adb devices
+                        </code>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</body>
+</html>
